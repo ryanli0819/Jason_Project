@@ -1,0 +1,378 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "22a5e1d1-5d90-4a9b-83b4-bafdaee690ac",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a positive integer:  100\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The sum of all numbers from 1 to 100 is 4950.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 1: Summation of Numbers\n",
+    "# Goal: Provide a function to calculate the sum of all numbers from 1 to n (including n), where n is an integer greater than 0.\n",
+    "def calculate_sum(n):\n",
+    "    # Initialize a variable to keep track of the sum\n",
+    "    total = 0\n",
+    "    # Use a loop to add each number from 1 to n to the total\n",
+    "    for i in range(n):\n",
+    "        total = i + total \n",
+    "    # Return the computed sum\n",
+    "    return total\n",
+    "\n",
+    "# Testing the function\n",
+    "n = int(input(\"Enter a positive integer: \"))\n",
+    "# Ensure the input is positive\n",
+    "if n <= 0:\n",
+    "    print(\"Please enter a positive integer greater than 0.\")\n",
+    "else:\n",
+    "    print(f\"The sum of all numbers from 1 to {n} is {calculate_sum(n)}.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "aca0d352-aac2-4851-999a-f1f4154c4e5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "There are 5 even numbers and 5 odd numbers in the list.\n"
+     ]
+    }
+   ],
+   "source": [
+    "def count_even_odd(numbers):\n",
+    "    even_count = 0\n",
+    "    odd_count = 0\n",
+    "    a = len(numbers)\n",
+    "    # Use a loop to iterate through the numbers\n",
+    "    for i in range(a):\n",
+    "        if numbers[i] % 2 ==0:\n",
+    "            even_count += 1\n",
+    "        else:\n",
+    "            odd_count += 1\n",
+    "    return even_count, odd_count\n",
+    "\n",
+    "# Testing the function\n",
+    "numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+    "even_count, odd_count = count_even_odd(numbers)\n",
+    "print(f\"There are {even_count} even numbers and {odd_count} odd numbers in the list.\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "171c2e22-31a0-4cbf-b785-9b53167ba115",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "KeyboardInterrupt",
+     "evalue": "Interrupted by user",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[34], line 14\u001b[0m\n\u001b[1;32m     12\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m factorial\n\u001b[1;32m     13\u001b[0m \u001b[38;5;66;03m# Testing the function\u001b[39;00m\n\u001b[0;32m---> 14\u001b[0m n \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mint\u001b[39m(\u001b[38;5;28;43minput\u001b[39;49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mEnter a positive integer to calculate the factorial: \u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m)\u001b[49m)\n\u001b[1;32m     15\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124mf\u001b[39m\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mThe factorial of \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mn\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m is \u001b[39m\u001b[38;5;132;01m{\u001b[39;00mcalculate_factorial(n)\u001b[38;5;132;01m}\u001b[39;00m\u001b[38;5;124m.\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n",
+      "File \u001b[0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/ipykernel/kernelbase.py:1251\u001b[0m, in \u001b[0;36mKernel.raw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1249\u001b[0m     msg \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mraw_input was called, but this frontend does not support input requests.\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[1;32m   1250\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m StdinNotImplementedError(msg)\n\u001b[0;32m-> 1251\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_input_request\u001b[49m\u001b[43m(\u001b[49m\n\u001b[1;32m   1252\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mstr\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mprompt\u001b[49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1253\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_parent_ident\u001b[49m\u001b[43m[\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mshell\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m]\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1254\u001b[0m \u001b[43m    \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mget_parent\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[38;5;124;43mshell\u001b[39;49m\u001b[38;5;124;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1255\u001b[0m \u001b[43m    \u001b[49m\u001b[43mpassword\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[38;5;28;43;01mFalse\u001b[39;49;00m\u001b[43m,\u001b[49m\n\u001b[1;32m   1256\u001b[0m \u001b[43m\u001b[49m\u001b[43m)\u001b[49m\n",
+      "File \u001b[0;32m/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/ipykernel/kernelbase.py:1295\u001b[0m, in \u001b[0;36mKernel._input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1292\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mKeyboardInterrupt\u001b[39;00m:\n\u001b[1;32m   1293\u001b[0m     \u001b[38;5;66;03m# re-raise KeyboardInterrupt, to truncate traceback\u001b[39;00m\n\u001b[1;32m   1294\u001b[0m     msg \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mInterrupted by user\u001b[39m\u001b[38;5;124m\"\u001b[39m\n\u001b[0;32m-> 1295\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mKeyboardInterrupt\u001b[39;00m(msg) \u001b[38;5;28;01mfrom\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[1;32m   1296\u001b[0m \u001b[38;5;28;01mexcept\u001b[39;00m \u001b[38;5;167;01mException\u001b[39;00m:\n\u001b[1;32m   1297\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mlog\u001b[38;5;241m.\u001b[39mwarning(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mInvalid Message:\u001b[39m\u001b[38;5;124m\"\u001b[39m, exc_info\u001b[38;5;241m=\u001b[39m\u001b[38;5;28;01mTrue\u001b[39;00m)\n",
+      "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+     ]
+    }
+   ],
+   "source": [
+    "def calculate_factorial(n):\n",
+    "    factorial = 1\n",
+    "    # Loop while n is greater than 1\n",
+    "    for i in range(1,n):\n",
+    "        if n == 1:\n",
+    "            return n\n",
+    "            \n",
+    "        if n > 1:\n",
+    "            factorial = factorial * (i + 1)\n",
+    "\n",
+    "        print(factorial)\n",
+    "    return factorial\n",
+    "# Testing the function\n",
+    "n = int(input(\"Enter a positive integer to calculate the factorial: \"))\n",
+    "print(f\"The factorial of {n} is {calculate_factorial(n)}.\")\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "362a8c07-8504-446c-99b0-fac44886a8a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Febonachi number 7\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "13\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 9: Algorithms - Fibonacci Sequence\n",
+    "# Goal: Write a function that returns the nth Fibonacci number. The Fibonacci sequence is a sequence of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.\n",
+    "def fibonacci(n):\n",
+    "    # Your code here\n",
+    "    pre = 1\n",
+    "    n = input(\"Febonachi number\")\n",
+    "    n = int(n)\n",
+    "    if n < 3:\n",
+    "        return 1\n",
+    "    fib = [1,1]\n",
+    "    for i in range(3,n+1):\n",
+    "        val = fib[-1] + fib[-2]\n",
+    "        fib.append(val)\n",
+    "    return val\n",
+    "\n",
+    "# Test the function\n",
+    "print(fibonacci(7))  # Should return 13"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "d0ba4d52-9f8d-4fb4-8fb0-1683bb50bf98",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Kyle 2.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Dog:\n",
+    "    def __init__ (self,name,age):\n",
+    "        self.name = name\n",
+    "        self.age = age\n",
+    "    def bark (self,a):\n",
+    "        if a == \"王子请狗叫\":\n",
+    "            print(\"汪汪\")\n",
+    "Sb_dog = Dog(\"Kyle\",\"2.5\")\n",
+    "a = Sb_dog.name\n",
+    "b = Sb_dog.age\n",
+    "print(a,b)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "228b9442-0330-41cc-972e-9e5b07ca3035",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "我诶被哈佛就弄开v菩萨金额佛吧唧女狂魔款墨镜发你公司看马卡罗夫是你健康几百年\n",
+      "个保护萨夫拜金女艾比湖附近的女保护锦囊妙计时\n",
+      "法i u还不具备研发u一个v发布会i技能\n",
+      "付哈啊从9北京呢\n",
+      "付还比较能吃苦了吗\n",
+      "i还发不进擦口没吃\n"
+     ]
+    }
+   ],
+   "source": [
+    "with open(\"g.txt\",\"r\") as b:\n",
+    "    a = b.read()\n",
+    "    print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "6dceac74-3d73-4c59-87b4-f265a3a51b8f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'name': 'ryan', 'age': 18, 'gender': 'male', 'hobby': 'ice'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "ryan = {\n",
+    "        \"name\": \"ryan\",\n",
+    "        \"age\": 18,\n",
+    "        \"gender\": \"male\"\n",
+    "        }\n",
+    "ryan[\"hobby\"] = \"ice\"\n",
+    "print(ryan)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "660db3a5-5275-4a88-9ede-214f9e9ab6c6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "None\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(ryan.get(\"123\"))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "3bec59b9-816e-4d59-8250-26585bbe4fd1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter a word/phrase hello world\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "{'h': 1, 'e': 1, 'l': 3, 'o': 2, 'w': 1, 'r': 1, 'd': 1}\n",
+      "None\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Exercise 10: Data Structures - Dictionary Usage\n",
+    "# Goal: Write a function that takes a string and returns a dictionary with the letters as keys and the count of each letter as values.\n",
+    "def letter_count(s):\n",
+    "    s = input(\"Enter a word/phrase\")\n",
+    "    s = str(s)\n",
+    "    s = s.replace(\" \", \"\")\n",
+    "    a = dict()\n",
+    "    for letter in s:\n",
+    "        if a.get(letter) == None:\n",
+    "            a[letter] = 1\n",
+    "        else:\n",
+    "            a[letter] += 1\n",
+    "    print(a)\n",
+    "        \n",
+    "# Test the function\n",
+    "print(letter_count(\"hello world\"))  # Should return {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "71f634ab-bea3-4863-864d-9fd440f62d44",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "for i in range(1,100):\n",
+    "    if i % 15 == 0:\n",
+    "        print(\"FizzBuzz\")\n",
+    "    elif i % 3 == 0:\n",
+    "        print(\"Fizz\")\n",
+    "    elif i % 5 == 0:\n",
+    "        print(\"Buzz\")\n",
+    "    else:\n",
+    "        print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "b8ee35b8-6441-4eb2-aa11-168c05a202ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "gimme a number:  10\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "30\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Write a program that calculates the sum of all even numbers from 1 to a given number `n`. Use a `while` loop for this exercise.\n",
+    "n = input(\"gimme a number: \")\n",
+    "n = int(n)\n",
+    "sum = 0\n",
+    "i = 1\n",
+    "while i <= n:\n",
+    "    if i % 2 == 0:\n",
+    "        sum += i\n",
+    "    i += 1\n",
+    "print(sum)\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c9b04996-7946-4fc8-a8de-02a022888dd0",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
